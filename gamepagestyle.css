@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    overflow-x: hidden;
+}
+
+/* Navbar style */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Times New Roman';
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #9370DB;
+}
+
+.game-body{
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+}
+
+.video-container-styling{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    background-color: #444;
+    padding: 0px;
+    max-width: 85%;
+}
+
+.video-container{
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 470px;
+    align-self: center;
+    min-height: fit-content;
+}
+
+.video-container .video{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: stretch;
+    border: 2px white solid;
+}
+
+
+.video-container .video .current-video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: 2px whitesmoke solid;
+    padding: 0;
+    margin-left: -2px;
+    margin-top:  -2px;
+    max-height: 360px;
+}
+
+.video-container .video .image-shower{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: 2px whitesmoke solid;
+    padding: 0;
+    margin-left: -2px;
+    margin-top:  -2px;
+    max-height: 360px;
+}
+
+.video-container .video-text{
+    color: white;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    justify-self: stretch;
+    margin-left: 20px;
+    padding: 5px;
+    border: 2px whitesmoke solid;
+}
+
+.videos-photos{
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    column-gap: 6px;
+    min-height: 100px;
+}
+
+/* .videos-photos::-webkit-scrollbar-track{
+    background-color: #9370DB;
+} */
+
+.videos-photos > video{
+    object-fit: fill;
+}
+
+.videos-photos > img{
+    object-fit: fill;
+}
+
+.videos-photos > img:hover{
+    transform: scale(1.05);
+    border: 1px whitesmoke;
+}
+
+.videos-photos > video:hover{
+    transform: scale(1.05);
+}
+
+.game-title{
+    width: 50%;
+    margin: auto;
+    color: whitesmoke;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.video-container .video .image-shower{
+    width: 100%;
+    height: 100%;
+    border: 2px whitesmoke solid;
+    padding: 0;
+    margin-left: -2px;
+    margin-top:  -2px;
+    max-height: 360px;
+    z-index: -1;
+}
+
+
+.selected-image {
+    border: 2px #9370DB solid;
+}
+
+
+ /* Game tags */
+ .game-tags{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    margin: 10px 0;
+    width: 100%;
+ }
+
+ .game-tags > p{
+    border: 2px solid #9370db;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 2px 3px;
+    text-align: center;
+    white-space: nowrap;
+ }
+
+ /* Paragraph that notices the user that if he isn't connected he can't add the game to cart */
+ .login-to-purchase{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 85%;
+    color: whitesmoke;
+    margin-left: 0px;
+    padding-left: 0px;
+    background-color: #333;
+    height: 25px;
+    padding-top: 10px;
+ }
+
+ /* Price label and add to cart button */
+ .purchase-container{ 
+    position: relative;
+    width: fit-content;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-left: 20px;
+    gap: 20px;
+ }
+
+ .purchase-container .purchase-card{
+    background: linear-gradient(to right, #333, #666, #444);
+    border: 1px solid #444;
+    width: 100%;
+ }
+
+ .purchase-container .buy-message{
+    font-size: 30px;
+    font-weight: 800;
+    color: whitesmoke;
+ }
+
+ .purchase-container .price-text-container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+ }
+
+ .purchase-container .price-label{
+    background-color: #777;
+    color: whitesmoke;
+    text-align: center;
+    width: 100px;
+    height: fit-content;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 0px;
+    transform: translateX(-30%);
+ }
+
+ .purchase-container .price-text-container > button{
+    width: 80px;
+    height: 35px;
+    display:inline-block;
+    padding:0.25em 1.2em;
+    border: 2px solid white;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #9370DB;
+    border-radius: 0px;
+    transform: translateX(-35%);
+ }
+
+ .purchase-container .price-text-container >button:hover{
+    color: whitesmoke;
+    background-color: #7758b6;
+ }
+
+ .details-title{
+     font-size: 16px;
+     color: #3f0da3;
+ }
+
+ .details-paragraph{
+    color: whitesmoke;
+    width: 100%;
+    padding-left: 0px;
+    font-size: 17px;
+ }
+
+ .line{
+    border-color: #9370DB;
+    border-width: 2px;
+    border-radius: 30px;
+ }
+
+ .footer{
+    margin-left: 18px;
+ }
+
+ /* Scroll bar style */
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #9370DB;
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 20px;
+    height: 15px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #826eaa;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: white;
+	border: 2px solid #555555;
+}
+
+.review-card{
+    width: 50%;
+    height: fit-content;
+    background: linear-gradient(to right, #333, #666, #444);
+    color: whitesmoke;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.review-card > p{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.review-button{
+    display:inline-block;
+    padding:0.25em 1.2em;
+    border: 2px solid white;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #9370DB;
+    border-radius: 0px;
+}
+
+.review-stars{
+    width: 100%;
+}
+
+.review-stars .fa{
+    padding: 2px;
+}
+
+.review-card .checked {
+    color: orange;
+}
+
+
+
+.new-comment{
+    margin-left: 18px;
+    max-width: 95%;
+}
+
+.new-comment .addcomment-btn{
+    display:inline-block;
+    padding:0.25em 1.2em;
+    border: 2px solid white;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #9370DB;
+    border-radius: 0px;
+}
+
+.comments-container{
+    width: 96%;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #333, #666, #444);
+    gap: 20px;
+}
+
+.comments-container .comments-card{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.comments-card > label{
+    font-size: 18px;
+}
+
+.comments-card > p{
+    border: 1px solid #777;
+    height: 200px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 880px){
+    .video-container-styling{
+        width: 85%;
+    }
+
+    .video-container{
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 410px 410px;
+        grid-gap: .5rem;
+    }
+
+    .video-container .video{
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        justify-self: stretch;
+        border: 2px white solid;
+    }
+
+    .video-container .video-text{
+        color: white;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        justify-self: stretch;
+        margin-left: 0px;
+        padding: 5px;
+        border: 2px whitesmoke solid;
+    }
+
+    .video-container .video .current-video{
+        max-height: 300px;
+    }
+    
+    .video-container .video .image-shower{
+        max-height: 300px;
+    }
+}

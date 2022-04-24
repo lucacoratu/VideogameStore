@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="loginstyle.css">
+    <head>
+        <title>
+            Video Game Store
+        </title>
+    </head>
+    <body class="login-body">
+        <!-- In this div are the elements from the navigation bar-->
+        <div class="navbar">
+            <a href="index.php"> 
+                <b>Home</b>
+            </a>
+        </div>
+        <hr color="rebeccapurple" style="height: 2px;">
+        <!-- White lines for page alignement-->
+        <br><br><br>
+        <!-- In the div below is the rectangle for the login-->
+        <div class="login-rectangle">
+            <br>
+            <div class="login-text" align="center">
+                <b class="login-title">Login</b>
+                <form class="user-loginform" method="POST" action="login.php">
+                    <br>
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" placeholder="Enter username" name="username"></input>
+                    <br>
+                    <br>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" placeholder="Enter password" name="password"></input>
+                    <br>
+                    <br>
+                    <input type="checkbox" value="remember_account">
+                    <label>Remember this account</label>
+                    <br>
+                    <br>
+                    <div align="center"> 
+                        <input type="submit" value="Log into account">
+                    </div>
+                </form>
+                <br>
+                <a class="link" href="forgotpassword.php" >Forgot password?</a>
+                <br>
+                <br>
+                <a class="link" href="register.html">Don't have an account?</a>
+            </div>
+            <!--
+            <div class="inner-login-rectangle">
+                <br>
+                <p>Username</p>
+                <input type="text">
+                </input>
+                <br>
+                <p>Password</p>
+                <input type="password">
+                </input>
+                <br>
+                <br>
+                <button>
+                    Log into account
+                </button>
+                <br>
+                <br>
+                <a>
+                    Forgot password?
+                </a>
+            </div>
+            -->
+           
+        </div>
+    </body>
+</html>

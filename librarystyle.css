@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #555;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Times New Roman';
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #9370DB;
+}
+
+.sidebar{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.sidebar > b {
+    color: whitesmoke;
+    width: 100%;
+    /* position: relative;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.sidebar > label{
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar .library-games{
+    display: flex;
+    color: whitesmoke;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+    overflow-y: auto;
+}
+
+.sidebar .library-games > button{
+    background-color: transparent;
+    border: 0px;
+    padding: 3px;
+    color: whitesmoke;
+}
+
+.sidebar .library-games > button:hover{
+    background-color: #555;
+}
+
+.sidebar .library-games > button:active{
+    background-color: #444;
+}
+
+.sidebar-iframe{
+    display: grid;
+    width: 100%;
+    height: 95%;
+    grid-template-columns: 20% auto;
+}
+
+.sidebar-iframe > iframe{
+    width: 100%;
+    height: 100%;
+    border-top: 0px;
+    visibility: hidden;
+}

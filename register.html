@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Game Store</title>
+        <link rel="stylesheet" href="registerstyle.css">
+        <script src="registerscript.js" defer></script>
+    </head>
+    <body class="register-body">
+        <div class="navbar">
+            <a href="index.php"><b>Home</b></a>
+        </div>
+        <hr color="rebeccapurple" style="height: 2px;">
+        <!-- Step indicator  -->
+        <div class="progress-bars">
+            <label class="number-label active" id="number1">1</label>
+            <div class="zero-one">
+                <progress id="first-progress" value="0" max="100"></progress>
+            </div>
+            <label class="number-label" id="number2">2</label>
+            <div class="zero-one">
+                <progress id="second-progress" value="0" max="100"></progress>
+            </div>
+            <label class="number-label" id="number3">3</label>
+        </div>
+        <form data-multi-step method="POST" action="registeracc.php" >
+            <div class="step" data-step="1">
+                <!-- First step will contain username password and confirm password -->
+                <h1 class="step-title">Login Information</h1>
+                <div class="form-group">
+                    <input type="text" name="username" id="username" placeholder="Enter username"> <!-- required pattern="[A-Za-z\._0-9]*" -->
+                    <br>
+                    <input type="password" name="password" id="password"placeholder="Enter password"> <!-- required pattern="^[A-Z][a-z0-9]{5,}" oninvalid="this.setCustomValidity('Password should start with an uppercase and should be at least 6 characters long')"> -->
+                    <br>
+                    <input type="password" name="confirm-password" id="confirm-password"placeholder="Confirm password" required>
+                </div>
+                <button class="button-next" type="button" data-next>Next</button>
+                <br>
+                <br>
+                <div class="login-ref">
+                    <a href="login.html">Already have an account?</a>
+                </div>
+            </div>
+            <div class="step" data-step="2">
+                <!-- Second step will contain Last name, first name and email -->
+                <h1 class="step-title">Personal Details</h1>
+                <div class="form-group">
+                    <input type="text" name="last-name" id="last-name" placeholder="Last name" required>
+                    <br>
+                    <input type="text" name="first-name" id="first-name" placeholder="First name" required>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter email" required>
+                </div>
+                <button class="button-previous" type="button" data-previous>Previous</button>
+                <button class="button-next" type="button" data-next>Next</button>
+                <div class="login-ref">
+                    <a href="login.html">Already have an account?</a>
+                </div>
+            </div>
+            <div class="step" data-step="3">
+                <!-- Last step will contain display name and optional field with social platform accounts-->
+                <h1 class="step-title">Social accounts</h1>
+                <div class="form-group">
+                    <input type="text" name="address" placeholder="Address*">
+                    <br>
+                    <input type="text" name="facebook" placeholder="Facebook*">
+                    <br>
+                    <input type="text" name="instagram" placeholder="Instagram*">
+                </div>
+                <button class="button-previous" type="button" data-previous>Previous</button>
+                <button class="button-next" type="submit">Finish</button>
+                <div class="login-ref">
+                    <a href="login.html">Already have an account?</a>
+                </div>
+            </div>
+        </form>
+</body>
+</html>
