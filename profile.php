@@ -44,6 +44,13 @@
             <a style="margin-left: auto;" href="listpurchases.php">
                 <b>Purchases</b>
             </a>
+            <?php
+                if(isset($_SESSION['acc_type']) and $_SESSION['acc_type'] == 2){
+                    echo '<a href="manageaccounts.php">
+                            <b>Manage</b>
+                        </a>';
+                }
+            ?>
         </div>
         <hr color="rebeccapurple" style="height: 2px;">
         <div class="profile-body">

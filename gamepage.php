@@ -495,7 +495,7 @@
                 $sql = "select AccID from reviews
                 inner join accounts
                 on accounts.ID = reviews.AccID
-                where accounts.Username = '$usernameEscaped'";
+                where accounts.Username = '$usernameEscaped' and reviews.GameID = $game_id";
 
                 $result = $conn->query($sql);
                 if($result->num_rows == 0) { 
