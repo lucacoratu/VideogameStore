@@ -34,8 +34,8 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.php"> 
-            <b>Home</b>
+        <a href="profile.php"> 
+            <b>Profile</b>
         </a>
     </div>
     <hr color="rebeccapurple" style="height: 2px;">

@@ -65,7 +65,7 @@
                     $result = $conn->query($sql);
                     if($result->num_rows == 0) {
                         //Shopping cart is empty
-                        echo '<p>Shopping cart is empty!</p>';
+                        echo '<p style="text-align: center; color: whitesmoke; font-size: 20px;">Shopping cart is empty!</p>';
                     }
                     else{
                         while($row = $result->fetch_assoc()){
